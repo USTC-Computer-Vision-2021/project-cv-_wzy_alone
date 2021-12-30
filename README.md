@@ -256,11 +256,7 @@ projected_desired_points, jac = cv2.projectPoints(desired_points, rvecs, tvecs, 
 
 ## 效果展示
 
-在这儿可以展示自己基于素材实现的效果，可以贴图，如果是视频，建议转成 Gif 插入，例如：
-
-![AR 效果展示](demo/ar.gif)
-
-如果自己实现了好玩儿的 feature，比如有意思的交互式编辑等，可以想办法展示和凸显出来。
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/6.png)
 
 ## 工程结构
 
@@ -278,14 +274,6 @@ projected_desired_points, jac = cv2.projectPoints(desired_points, rvecs, tvecs, 
 
 ## 运行说明
 
-在这里，建议写明依赖环境和库的具体版本号，如果是 python 可以建一个 requirements.txt，例如：
-
-```
-opencv-python==3.4
-Flask==0.11.1
-```
-
-运行说明尽量列举清晰，例如：
 ```
 pip install opencv-contrib-python
 pip install matplotlib
