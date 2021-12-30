@@ -47,6 +47,7 @@ plt.imshow(aruco_marker_3)
 plt.xticks([])
 plt.yticks([])
 plt.show()
+```
 
 创建的标记进行可视化，结果如下
 
@@ -54,6 +55,7 @@ plt.show()
 
 使用cv2.aruco.detectMarkers()函数检测标记，然后使用 cv2.aruco.drawDetectedMarkers() 函数绘制检测到的标记和拒绝的候选标记。
 
+```python
 # 创建字典对象
 aruco_dictionary = cv2.aruco.Dictionary_get(cv2.aruco.DICT_7X7_250)
 # 创建参数对象
