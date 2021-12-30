@@ -287,7 +287,6 @@ Flask==0.11.1
 
 运行说明尽量列举清晰，例如：
 ```
-pip install opencv-python
-python run.py --src_path xxx.png --dst_path yyy.png
-npm run make-es5 --silent
+pip install opencv-contrib-python
+pip install matplotlib
 ```
