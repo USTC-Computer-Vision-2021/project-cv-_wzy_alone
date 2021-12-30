@@ -262,14 +262,11 @@ projected_desired_points, jac = cv2.projectPoints(desired_points, rvecs, tvecs, 
 
 ```text
 .
-├── code
-│   ├── run.py
-│   └── utils.py
-├── input
-│   ├── bar.png
-│   └── foo.png
-└── output
-    └── result.png
+├── code: main.py
+├── coverage picture: example.png 
+├── camera data file: calibration.pckl
+└── images
+    └── each steps' result picture
 ```
 
 ## 运行说明
