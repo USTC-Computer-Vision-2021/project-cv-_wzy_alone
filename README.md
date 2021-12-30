@@ -50,7 +50,7 @@ plt.show()
 
 创建的标记进行可视化，结果如下
 
-![image]()
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/1.jpg)
 
 使用cv2.aruco.detectMarkers()函数检测标记，然后使用 cv2.aruco.drawDetectedMarkers() 函数绘制检测到的标记和拒绝的候选标记。
 
@@ -82,7 +82,7 @@ cv2.destroyAllWindows()
 
 执行程序后，可以看到检测到的标记用绿色边框绘制，而被拒绝的候选标记用红色边框绘制。
 
-![image]()
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/2.jpg)
 
 #### partⅡ相机校准
 
@@ -90,11 +90,11 @@ cv2.destroyAllWindows()
 
 这是以下过程中创建的标记板
 
-![image]()
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/3.jpg)
 
 校准过程完成后，使用pickle将相机矩阵和失真系数保存到磁盘。之后就可以执行相机姿态估计过程。
 
-![image]()
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/4.jpg)
 
 ```python
 # 创建板
@@ -180,14 +180,14 @@ while True:
 ```
 结果如下
 
-![image]()
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/5.jpg)
 
 #### partⅣ增强现实
 
 draw_augmented_overlay() 函数首先定义叠加图像的正方形。然后计算变换矩阵，用于变换叠加图像得到 dst_image 图像；接下来，创建掩码并使用之前创建的掩码按位运算以获得 image_masked 图像；最后将 dst_image 和image_masked 相加，得到结果图像，并返回。
 程序运行结果如下图所示：
 
-![image]()
+![image](https://github.com/USTC-Computer-Vision-2021/project-cv-_wzy_alone/blob/main/images/6.png)
 
 ```python
 def draw_augmented_overlay(pts_1, overlay_image, image):
@@ -251,24 +251,6 @@ while True:
 desired_points = np.float32([[-1 / 2, 1 / 2, 0], [1 / 2, 1 / 2, 0], [1 / 2, -1 / 2, 0], [-1 / 2, -1 / 2, 0]]) * OVERLAY_SIZE_PER
 projected_desired_points, jac = cv2.projectPoints(desired_points, rvecs, tvecs, cameraMatrix, distCoeffs)
 ```
-
-
-尽量讲清楚自己的设计，以上分析的每个技术难点分别采用什么样的算法实现的，可以是自己写的（会有加分），也可以调包。如有参考别人的实现，虽不可耻，但是要自己理解和消化，可以摆上参考链接，也鼓励大家进行优化和改进。
-
-- 鼓励大家分拆功能，进行封装，减小耦合。每个子函数干的事情尽可能简单纯粹，方便复用和拓展，整个系统功能也简洁容易理解。
-- 尽量规范地命名和注释，使代码容易理解，可以自己参考网上教程。
-
-插入算法的伪代码或子函数代码等，能更清晰地说明自己的设计，其中，可以用 markdown 中的代码高亮插入，比如：
-
-```python
-data = ["one", "two", "three"]
-for idx, val in enumerate(data):
-    print(f'{idx}:{val}')
-
-def add_number(a, b):
-    return a + b
-```
-
 
 ## 效果展示
 
